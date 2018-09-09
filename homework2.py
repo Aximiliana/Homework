@@ -18,11 +18,7 @@ geo_logs_filtred = []
 
 for i in geo_logs:
    tmp = i[1][1]
-   if tmp !=  'Россия':
-       pass
-       #geo_logs.remove(i)
-
-   else:
+   if tmp ==  'Россия':
         geo_logs_filtred.append(i)
 
 print(geo_logs_filtred)
@@ -55,7 +51,7 @@ print(geo_logs_filtred)
 cnt_queries = []
 #считаем запросы с список
 for query in queries:
-    cnt_queries = (len(query.split()))
+    cnt_queries.append(len(query.split()))
 
 # создаем словарь с ключами количеством слов в запросе, а значение сколько раз встречается в списке, ключ 100 это общее количество запросов
 result = {
@@ -116,6 +112,8 @@ for i in cnt_queries:
       tmp_user = line.split(',')[1]
     else:
        pass
+
+    print(tmp_user,count_users,count_watches)   
 
  print('Среднее значение просмотров на пользователя {: .2f}'.format(count_watches/count_users))
 
