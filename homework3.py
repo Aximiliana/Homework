@@ -1,4 +1,4 @@
-#Домашняя работа 2 ФИО:Михайлова Ксения
+#Домашняя работа 3 ФИО:Михайлова Ксения
 
 #1
 data = [
@@ -187,4 +187,4 @@ def list_to_dict (alist):
 
 list_to_dict (data)
 
-print(dict)        
+print(dict)
